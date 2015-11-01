@@ -1,0 +1,45 @@
+
+wats1010
+zen garden part 1
+
+
+wireframes
+https://app.moqups.com/yuens1002/VuffayShy5/view
+
+
+
+overall concept
+
+optimize for 1024px viewport or larger, use of inqurries to contronl font and elements to attempt a responsive page using css.  will think of ways to incorporate animate, transition, transform, etc per assignment requirements
+
+modern & clean design esthetics
+2 fonts choices - serif and san serif using a type scale
+a color palette - i'm leaning towards a pastle palette
+
+hope to achieve (impact/affect the user)
+
+i'm going to make some assumptions about the user.  the user is on the site to find out more about the project and to decide whether or not to participate in the redesign and submit their project following the requirements.
+
+i hope to inspire the user to partake on the site's mission -- "show people how amazing CSS really can be"  
+
+links
+
+http://www.csszengarden.com/
+love the typesetting/scale on the page and color scheme
+
+http://www.csszengarden.com/220/
+originality, theming and story-ese, progressive design appraoch/treatment to all screen sizes
+
+http://www.csszengarden.com/215/
+modern-day use of css with layers and animation
+
+http://csszengarden.com/218/
+the unity of form and fuction.... what i'm try to acheive as a front-end designer/developer. 
+
+   
+
+
+
+
+
+
