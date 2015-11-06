@@ -36,13 +36,11 @@ td {
 }
 
 html {
-    background: url(bg.png) fixed;
-    
+    background: url(white_texture.png);
 }
 
 body {
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.9);
+    background: url(ppr-shape.png) right bottom no-repeat fixed;
 }
 
 p,
@@ -58,11 +56,11 @@ blockquote {
 
 /**  02 typography  **************************************************************/
 
-html  {  font-size: 100%;  }  /**  ensures 16px browser default  **/ 
+html  {  font-size: 120%;  }  /**  ensures 16px browser default  **/ 
 
 body  {  
     font-family: 'Cutive Mono', serif;
-    color: black;
+    color: #333;
     line-height: 1.5;
 }
 
@@ -106,10 +104,67 @@ h4 {
     margin-bottom: 1rem; 
 }
 
+abbr {
+    letter-spacing: 0.4rem;
+}
+
+.designer-name {
+    font-style: italic;
+}
+
+
+/** links **/
+
+a:before {   /* this doesnt work on multi-line links */
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: -2px;
+    left: 0;
+    border-bottom: dotted 1px #b86101; 
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.2s ease-in-out 0s;
+    transition: all 0.2s ease-in-out 0s;
+}
+
+a:link {
+    position: relative;
+    color: #b86101;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: #b86101;
+}
+
+/* mouse over link */
+
+a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+    
+/* selected link */
+a:active {
+    color: #b86101;
+}
+
+
+
 
 /**  03 modules  ***************************************************************/
 
 .page-wrapper  { 
+    max-width: 1024px;
     width: 90%; 
     margin: 0 auto;    
 }
@@ -118,7 +173,7 @@ aside {
     position: absolute; right: 5%; top: 25rem; 
     width: 25%;
     padding-left: 3rem;
-    border-left: solid 1px #eaeaea;
+    border-left: dashed 1px #999;
     
 }
 
@@ -129,27 +184,48 @@ aside {
 
 footer {
     margin-bottom: 3rem;
-    ;
 }
 
-[role="banner"] {
+
+/* aside styles */
+
+.design-name:after {
+    content: '\a';
+    white-space: pre;
 }
+
+nav li, .zen-resources li {
+    margin: 0 0 .75rem 0;
+}
+
+
 
 /*  media queries */
 
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
     aside {
         position: static; 
         width: 100%;
         border: none;
-        
+        padding: 0 0 2rem 0;        
+    }
+    
+    #design-selection, #design-archives, #zen-resources {
+        display: inline-block;
+        vertical-align: top;
     }
   
     [role="article"], 
     [role="banner"], 
     footer {
         width: 100%;
+        margin: 0;
+    }
+    
+    footer {
+        padding-bottom: 1.5rem;
+        border-bottom: solid 1px #eaeaea;
     }
 }
 
