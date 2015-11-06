@@ -110,6 +110,7 @@ abbr {
 
 .designer-name {
     font-style: italic;
+    font-size: 0.707rem;
 }
 
 
@@ -170,7 +171,7 @@ a:active {
 }
 
 aside {
-    position: absolute; right: 5%; top: 25rem; 
+    position: absolute; right: 5%; top: 30rem; 
     width: 25%;
     padding-left: 3rem;
     border-left: dashed 1px #999;
