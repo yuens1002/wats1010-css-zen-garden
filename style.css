@@ -109,15 +109,16 @@ abbr {
     font-size: 80%;
 }
 
-.designer-name, 
-#zen-requirements p:last-of-type {
+.designer-name {
     font-style: italic;
     font-size: 0.707rem;    
 }
 
 #zen-requirements p:last-of-type {
     border-top: dashed 1px #999;
-    padding: 0rem 0
+    padding: 1rem 0;
+    text-transform: uppercase;
+    font-size: 0.707rem;
 }
 
 .design-selection li {
@@ -203,7 +204,7 @@ header h1::after {
     display: block;
     font: 1.999rem 'Amatic SC', cursive;
     font-weight: 700;
-    padding: 0.5rem 0 1rem 0;
+    padding: 5rem 0 1rem 0;
 }
 
 header h2 {
@@ -305,6 +306,7 @@ nav li, .zen-resources li {
 
 
 @media (max-width: 900px) {
+    
     aside {
         position: static; 
         width: 100%;
@@ -324,23 +326,42 @@ nav li, .zen-resources li {
     }
     
     footer {
-        padding-bottom: 5.5rem;
+        padding-bottom: 1rem;
         border-bottom: dashed 1px #999;
     }
     
-    h3.select::after {
-        display: table-row;  /*  puts it back to original position */
-        position: relative;
+    #design-selection h3 {
+        display: none;
     }
+    
+    #design-selection:before {
+        content:'Other CSS Gardens';
+        display: block;
+        font: 1.999rem 'Amatic SC', cursive;
+        font-weight: 700;
+        padding: 3rem 0 0.5rem 0;
+    } 
     
     #design-selection li {
         display: inline-block;
         text-align: center;
         margin: 0 1rem 1.5rem 0;
         border-left: dashed 1px #999;
-        padding: 0 0 0 1.5rem;    
+        padding: 0 0 0 1rem;    
     }
     
+}
+
+@media (max-width: 724px) {
+    
+    #design-selection li {
+        text-align: left;
+        display: table;
+        border: none;
+        margin: 0 0 0.5rem 0;
+        padding: 0;
+    }
+
 }
 
 /*  
