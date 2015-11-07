@@ -106,11 +106,29 @@ h4 {
 
 abbr {
     letter-spacing: 0.4rem;
+    font-size: 80%;
 }
 
-.designer-name {
+.designer-name, 
+#zen-requirements p:last-of-type {
+    font-style: italic;
+    font-size: 0.707rem;    
+}
+
+#zen-requirements p:last-of-type {
+    border-top: dashed 1px #999;
+    padding: 0rem 0
+}
+
+.design-selection li {
     font-style: italic;
     font-size: 0.707rem;
+}
+    
+.design-name {
+    font-size: 1rem;
+    font-style: normal;
+    background-color: rgba(255, 255, 255, .8);    
 }
 
 
@@ -160,9 +178,91 @@ a:active {
 }
 
 
+/** hide & replace **/
+
+
+header h1::before {
+    content: 'pepper\0027s';
+    background: url(ears.png) 4rem 100% no-repeat;
+    background-size: 10rem;
+    padding-top: 6rem;
+    display: block;
+    font-size: 1.999rem;
+}
+
+header h1::after {
+    content: ' and his favorite toys';
+    display: block;
+    background: url(ball.png) 17rem 55% no-repeat;
+    background-size: 3rem;
+    font-size: 2.827rem;
+}
+
+.summary p:first-child::before {
+    content: 'Zen Garden Design Tips';
+    display: block;
+    font: 1.999rem 'Amatic SC', cursive;
+    font-weight: 700;
+    padding: 0.5rem 0 1rem 0;
+}
+
+header h2 {
+    display: none;
+}
+
+h3.select {
+    visibility: hidden;
+} 
+
+h3.select::after {
+    content: 'Other CSS Gardens';
+    position: absolute;  /*  puts it back to original position */
+    display: block;
+    top: 2rem;
+    visibility: visible;
+}
+
+h3.archives {
+    display: none;
+} 
+
+.next a:first-child {
+    visibility: hidden;
+}
+
+.next a::after {
+    content: '-next';
+    position: absolute;  /*  puts it back to original position */
+    display: block;
+    top: 0;
+    visibility: visible;
+}
+
+.viewall a:first-child {
+    visibility: hidden;
+}
+
+.viewall a::after {
+    content: '+all';
+    position: absolute;  /*  puts it back to original position */
+    display: block;
+    top: 0;
+    visibility: visible;
+}
+
+#zen-resources h3 {
+    visibility: hidden;
+}
+
+#zen-resources h3::after {
+    content: 'Goodies';
+    float: left;
+    visibility: visible;
+}
 
 
 /**  03 modules  ***************************************************************/
+
 
 .page-wrapper  { 
     max-width: 1024px;
@@ -171,7 +271,7 @@ a:active {
 }
 
 aside {
-    position: absolute; right: 5%; top: 30rem; 
+    position: absolute; right: 5%; top: 25.6rem; 
     width: 25%;
     padding-left: 3rem;
     border-left: dashed 1px #999;
@@ -213,8 +313,7 @@ nav li, .zen-resources li {
     }
     
     #design-selection, #design-archives, #zen-resources {
-        display: inline-block;
-        vertical-align: top;
+        display: table;
     }
   
     [role="article"], 
@@ -225,9 +324,23 @@ nav li, .zen-resources li {
     }
     
     footer {
-        padding-bottom: 1.5rem;
-        border-bottom: solid 1px #eaeaea;
+        padding-bottom: 5.5rem;
+        border-bottom: dashed 1px #999;
     }
+    
+    h3.select::after {
+        display: table-row;  /*  puts it back to original position */
+        position: relative;
+    }
+    
+    #design-selection li {
+        display: inline-block;
+        text-align: center;
+        margin: 0 1rem 1.5rem 0;
+        border-left: dashed 1px #999;
+        padding: 0 0 0 1.5rem;    
+    }
+    
 }
 
 /*  
