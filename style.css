@@ -47,7 +47,8 @@ html {
 }
 
 body {
-    background: url(ppr-shape.png) right bottom no-repeat fixed;
+    background: url(ppr-shape.png) left 64% bottom no-repeat fixed;
+    background-size: contain
 }
 
 p,
@@ -284,10 +285,9 @@ h3.archives {
 
 .explanation h3::after {
     content: '';
-    background: url(toy-ppy.png) 0.5rem 2.5rem no-repeat;
-    background-size: 4rem;
-    padding-right: 5rem; /* room to show background-image  */
-    padding-top: 4rem;  /* room to show background-image  */
+    background: url(toy-ppy.png) 0.5rem .8rem no-repeat;
+    background-size: 3.5rem;
+    padding: 2rem 5rem 4rem 0;   /* room to show background-image  */
 }
 
 .participation h3::after {
