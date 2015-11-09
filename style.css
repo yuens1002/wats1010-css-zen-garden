@@ -211,7 +211,7 @@ header h1::after {
 }
 
 .summary p:first-child::before {
-    content: 'CSS Des\2002\2009gn Demo and Kit';
+    content: 'CSS Des\2002\2009\2009gn Demo and Kit';
     display: block;
     font: 1.999rem 'Amatic SC', cursive;
     font-weight: 700;
